@@ -1,0 +1,19 @@
+.title {
+    line-height: 1.25 !important;
+    font-weight: 600 !important;
+    font-size: 18px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin: 0.67em 0;
+}
+
+.link {
+    color: #58a6ff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #58a6ff;
+}

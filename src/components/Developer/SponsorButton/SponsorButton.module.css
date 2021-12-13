@@ -1,0 +1,37 @@
+.wrapper {
+    margin-right: 8px !important;
+}
+
+.link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 3px 12px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #c9d1d9;
+    background-color: #21262d;
+    transition: .2s cubic-bezier(0.3, 0, 0.5, 1);
+    transition-property:  color, background-color, border-color;
+    position: relative;
+    font-weight: 500;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid;
+    border-radius: 6px;
+    appearance: none;
+    text-decoration: none;
+    vertical-align: middle;
+    border-color: rgba(240, 246, 252, 0.1);
+}
+
+.link:hover {
+    background-color: #30363d;
+    transition-duration: .1s;
+    text-decoration: none;
+    outline-width: 0;
+    border-color: #8b949e !important;
+    color: #c9d1d9;
+}

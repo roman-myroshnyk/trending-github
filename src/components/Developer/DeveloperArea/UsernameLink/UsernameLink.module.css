@@ -1,0 +1,18 @@
+.title {
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    margin-bottom: 4px !important;
+    margin-top: 0;
+}
+
+.link {
+    color: #8b949e;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.link:hover {
+    color: #58a6ff;
+    text-decoration: underline;
+    outline-width: 0;
+}
