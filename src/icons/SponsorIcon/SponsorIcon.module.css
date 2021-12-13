@@ -1,0 +1,18 @@
+.sponsorIcon {
+    overflow: visible;
+    transition: transform .15s cubic-bezier(0.2, 0, 0,13, 2);
+    transform: scale(1);
+    margin-right: 0;
+    vertical-align: middle;
+    color:#db61a2;
+    animation-name: pulse-in;
+    animation-duration: .5s;
+    display: inline-block;
+    fill: currentColor;
+}
+
+@media (min-width: 768px) {
+    .sponsorIcon {
+        margin-right: 6px;
+    }
+}
