@@ -1,0 +1,14 @@
+.forksLink {
+    display: inline-block;
+    margin-right: 16px;
+    color:#8b949e;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.forksLink:hover {
+    color: #58a6ff;
+    text-decoration: none;
+    outline-width: 0;
+}

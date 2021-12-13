@@ -1,6 +1,9 @@
+// react
 import React from "react";
+// styles
 import styles from "./SponsorIcon.module.css";
-const SponsorIcon = () => (
+
+const SponsorIcon: React.FC = () => (
   <svg
     aria-hidden="true"
     height="16"

@@ -1,4 +1,6 @@
+// react
 import React from "react";
+// styles
 import styles from "./PopularRepoIcon.module.css";
 
 const PopularRepoIcon: React.FC = () => (

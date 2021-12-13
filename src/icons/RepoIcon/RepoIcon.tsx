@@ -1,5 +1,6 @@
+// react
 import React from "react";
-
+// styles
 import styles from "./RepoIcon.module.css";
 
 const RepoIcon: React.FC = () => (

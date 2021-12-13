@@ -1,0 +1,40 @@
+.link {
+    margin-right: 8px;
+    padding: 3px 12px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #c9d1d9;
+    background-color: #21262d;
+    transition: .2s cubic-bezier(0.3, 0, 0.5, 1);
+    transition-property: color, background-color, border-color;
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid;
+    border-radius: 6px;
+    border-color: rgba(240, 246, 252, 0.1) !important;
+    appearance: none;
+    text-decoration: none;
+}
+
+.link:hover {
+    background-color: #30363d;
+    border-color: #8b949e;
+    transition-duration: .1s;
+    text-decoration: none;
+}
+
+.title {
+    display: none;
+    vertical-align: middle;
+    color:#c9d1d9;
+}
+@media (min-width: 768px) {
+    .title {
+        display: inline;
+    }
+}

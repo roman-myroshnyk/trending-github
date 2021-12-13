@@ -1,16 +1,21 @@
 import React from "react";
 import Controls from "../../components/Trending/Controls/Controls";
-
+import Header from "../../components/Header/Header";
+import MainContentsWrapper from "../../components/MainContentsWrapper/MainContentsWrapper";
+import Repo from "../../components/Repo/Repo";
+import { repositoriesResponse } from "../../const/repositoriesMockData";
 const RepositoriesPage: React.FC = () => (
   <div>
-    <header>
-      <h1>Trending</h1>
-      <p>See what the GitHub community is most excited about today.</p>
-    </header>
-    <div>
+    <Header
+      title="Trending"
+      subTitle="See what the GitHub community is most excited about today."
+    />
+    <MainContentsWrapper>
       <Controls />
-      <div>Repositories Page</div>
-    </div>
+      {repositoriesResponse.map((repository) => {
+        return <Repo key={repository.rank} repo={repository} />;
+      })}
+    </MainContentsWrapper>
   </div>
 );
 
