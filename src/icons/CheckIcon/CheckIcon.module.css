@@ -1,0 +1,14 @@
+.checkIcon {
+    color: inherit;
+    visibility: hidden;
+    vertical-align: middle;
+    float: left;
+    margin-left: -20px;
+    display: inline-block;
+    overflow: visible !important;
+    fill: currentColor;
+}
+
+.checkIconChecked {
+    visibility: visible !important;
+}

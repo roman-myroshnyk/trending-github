@@ -1,0 +1,12 @@
+.modalMenuList {
+    position: relative;
+    max-height: 400px;
+    overflow: auto;
+}
+
+@media (max-width: 767px) {
+    .modalMenuList {
+        flex: auto;
+        max-height: none;
+    }
+}

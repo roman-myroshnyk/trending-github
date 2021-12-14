@@ -2,7 +2,6 @@
     margin-bottom: 16px;
     position: relative;
     display: flex;
-
 }
 
 @media (min-width: 544px) {
@@ -33,7 +32,6 @@
     color: #f0f6fc;
 }
 
-
 .pullDown::after {
     display: inline-block;
     width: 0;
@@ -48,4 +46,61 @@
 
 .pullDownSpan {
     font-weight: 600;
+}
+
+.modal {
+    z-index: 99;
+    border-color: #30363d;
+    position: absolute;
+    width: 300px;
+    margin-top: 4px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    font-size: 12px;
+    color: #c9d1d9;
+    background-color: #161b22;
+    background-clip: padding-box;
+    border: 1px solid #30363d;
+    border-radius:  6px;
+    right: 0 !important;
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .modal {
+        animation:hx_rsm-modal-animation .24s .12s cubic-bezier(0, 0.1, 0.1, 1) backwards;
+        position: fixed !important;
+        display: flex;
+        flex-direction: column;
+        margin:0;
+        width: auto;
+        height: 80%;
+        top: 75px;
+        left: 16px;
+        right: 16px !important;
+    }
+}
+
+.filterWrapper {
+    background: #161b22;
+}
+
+.pullDownIsOpen::before {
+    position: fixed;
+    top:0;
+    bottom:0;
+    right: 0;
+    left: 0;
+    z-index: 80;
+    display: block;
+    cursor: default;
+    content:"";
+    background:transparent;
+}
+
+@media (max-width: 767px) {
+    .pullDownIsOpen::before {
+        background-color: rgba(1,4,9, 0.8);
+        animation: hx_rms-trigger-aniation .24s cubic-bezier(0,0,0.2,1) backwards;
+    }
 }

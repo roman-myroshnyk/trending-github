@@ -11,7 +11,7 @@ const DevelopersPage: React.FC = () => (
       subTitle="These are the developers building the hot tools today."
     />
     <MainContentsWrapper>
-      <Controls />
+      <Controls hideSpokenLanguages={true} />
       {developersResponse.map((developer) => {
         return <DeveloperBage key={developer.rank} developer={developer} />;
       })}

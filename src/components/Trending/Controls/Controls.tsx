@@ -6,13 +6,17 @@ import Filters from "../Filters/Filters";
 // styles
 import styles from "./Controls.module.css";
 
-const TrendingListControls: React.FC = () => {
+interface IControls {
+  hideSpokenLanguages?: boolean;
+}
+
+const Controls: React.FC<IControls> = ({ hideSpokenLanguages = false }) => {
   return (
     <div className={styles.wrapper}>
       <Navigation />
-      <Filters />
+      <Filters hideSpokenLanguges={hideSpokenLanguages} />
     </div>
   );
 };
 
-export default TrendingListControls;
+export default Controls;

@@ -1,0 +1,11 @@
+.closeIcon {
+    color: #8b949e;
+    margin-right: 4px;
+    display: block;
+    float: right;
+    cursor: pointer;
+    overflow: visible !important;
+    vertical-align: text-bottom;
+    fill: currentColor;
+    
+}

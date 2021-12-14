@@ -1,0 +1,35 @@
+.modalMenuItem {
+    font-weight: 600;
+    color: #c9d1d9;
+    text-align: left;
+    background-color: #161b22;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    display: block;
+    padding: 8px 8px 8px 30px;
+    overflow: hidden;
+    cursor: pointer;
+    border-bottom: 1px solid #21262d;
+    text-decoration: none;
+}
+
+.modalMenuItem:hover {
+    color: #f0f6fc;
+    background-color: #1f6feb;
+    text-decoration: none;
+    outline-width: 0;
+}
+
+@media (max-width: 767px) {
+    .modalMenuItem {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 40px;
+    }
+}
+
+.modalMenuItemText {
+    display: block;
+    text-align: left;
+}
