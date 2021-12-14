@@ -1,0 +1,30 @@
+.header {
+    background-color: #161b22;
+    border-bottom: 1px solid #30363d;
+}
+
+.headerInnerWrapper {
+    text-align: center;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-top:40px;
+    padding-bottom: 40px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left:0.67em;
+    margin-right: 0.67em;
+}
+
+.subTitle {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    color:#8b949e;
+}
