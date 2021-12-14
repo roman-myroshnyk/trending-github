@@ -1,0 +1,41 @@
+.navigation {
+    margin-bottom: 0;
+    display: block;
+    height: 32px;
+}
+
+.navButton {
+    position: relative;
+    float: left;
+    padding:5px 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #f0f6fc;
+    border: 1px solid #30363d;
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 14px;
+    
+    
+}
+.navButton:any-link {
+    color:#f0f6fc;
+}
+.navButton:first-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.navButton:last-child {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin-left: -1px;
+}
+
+.navButtonActive {
+    z-index:2;
+    color:#f0f6fc;
+    background-color: #1f6feb;
+    border-color: #1f6feb;
+
+}

@@ -1,19 +1,16 @@
+// react
 import React from "react";
-import { useParams } from "react-router-dom";
 // components
 import Navigation from "../Navigation/Navigation";
-// utils
-import useQueryParams from "../../../utils/useQueryParams";
+import Filters from "../Filters/Filters";
+// styles
+import styles from "./Controls.module.css";
 
 const TrendingListControls: React.FC = () => {
-  const query = useQueryParams();
-  const { language = "Any" } = useParams<{ language: string }>();
   return (
-    <div>
+    <div className={styles.wrapper}>
       <Navigation />
-      <div>Spoken Language: {query.get("spoken_language_code")}</div>
-      <div>Language: {language}</div>
-      <div>Date range: {query.get("since")}</div>
+      <Filters />
     </div>
   );
 };
