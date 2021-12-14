@@ -1,5 +1,6 @@
+// react
 import React from "react";
-
+// styles
 import styles from "./PullDownWithSearchBar.module.css";
 
 interface IPullDownWithSearchBar {
