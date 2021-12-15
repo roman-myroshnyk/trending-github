@@ -1,5 +1,5 @@
 // axios and react-query
-import { useQuery } from "react-query";
+import { useQuery, UseQueryResult } from "react-query";
 import axios from "axios";
 // proxy
 import { PROXY_URL } from "../const/proxy";
@@ -33,7 +33,7 @@ export default function useTrendingRepositories(
   dateRange: DateTypes,
   spokenLanguage?: SpokenLanguagesCodes,
   language?: ProgrammingLanguages
-) {
+): UseQueryResult<IRepository[]> {
   return useQuery<IRepository[]>(
     ["repositories", language, spokenLanguage, dateRange],
     () => getTrendingRepositories(dateRange, spokenLanguage, language)

@@ -1,5 +1,5 @@
 // axios and react-qury
-import { useQuery } from "react-query";
+import { useQuery, UseQueryResult } from "react-query";
 import axios from "axios";
 // proxy
 import { PROXY_URL } from "../const/proxy";
@@ -31,7 +31,7 @@ const getTrendingDevelopers = async (
 export default function useTrendingDevelopers(
   dateRange: DateTypes,
   language?: ProgrammingLanguages
-) {
+): UseQueryResult<IDeveloper[], unknown> {
   return useQuery<IDeveloper[]>(["developer", language, dateRange], () =>
     getTrendingDevelopers(dateRange, language)
   );
