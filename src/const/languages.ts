@@ -1,1144 +1,1146 @@
-import { ProgrammingLanguages as langCode } from "../api/interfaces";
+import { ProgrammingLanguages as langCode } from "../api/interfaces.d";
 
-interface ILanguage {
-  code: langCode;
-  title: string;
+export interface ILanguage {
+  code?: langCode;
+  language: string;
 }
+
+export const defaultLanguage: ILanguage = {
+  code: undefined,
+  language: "Any",
+};
+
 export const languages: ILanguage[] = [
   {
     code: langCode.cplusplus,
-    title: "C++",
+    language: "C++",
   },
   {
     code: langCode.html,
-    title: "HTML",
+    language: "HTML",
   },
   {
     code: langCode.java,
-    title: "Java",
+    language: "Java",
   },
   {
     code: langCode.javascript,
-    title: "JavaScript",
+    language: "JavaScript",
   },
   {
     code: langCode.php,
-    title: "PHP",
+    language: "PHP",
   },
   {
     code: langCode.python,
-    title: "Python",
+    language: "Python",
   },
   {
     code: langCode.ruby,
-    title: "Ruby",
+    language: "Ruby",
   },
   {
     code: langCode.unknown,
-    title: "Unknown languages",
+    language: "Unknown languages",
   },
   {
     code: langCode.oneCEnterprise,
-    title: "1C Enterprise",
+    language: "1C Enterprise",
   },
   {
     code: langCode.fourD,
-    title: "4D",
+    language: "4D",
   },
   {
     code: langCode.abap,
-    title: "ABAP",
+    language: "ABAP",
   },
   {
     code: langCode.abapCds,
-    title: "ABAP CDS",
+    language: "ABAP CDS",
   },
   {
     code: langCode.abnf,
-    title: "ABNF",
+    language: "ABNF",
   },
   {
     code: langCode.actionscript,
-    title: "ActionScript",
+    language: "ActionScript",
   },
   {
     code: langCode.ada,
-    title: "Ada",
+    language: "Ada",
   },
   {
     code: langCode.adobeFontMetrics,
-    title: "Adobe Font Metrics",
+    language: "Adobe Font Metrics",
   },
   {
     code: langCode.agda,
-    title: "Agda",
+    language: "Agda",
   },
   {
     code: langCode.agsScript,
-    title: "AGS Script",
+    language: "AGS Script",
   },
   {
     code: langCode.al,
-    title: "AL",
+    language: "AL",
   },
   {
     code: langCode.alloy,
-    title: "Alloy",
+    language: "Alloy",
   },
   {
     code: langCode.alpineAbuild,
-    title: "Alpine Abuild",
+    language: "Alpine Abuild",
   },
   {
     code: langCode.altiumDesigner,
-    title: "Altium Designer",
+    language: "Altium Designer",
   },
   {
     code: langCode.ampl,
-    title: "AMPL",
+    language: "AMPL",
   },
   {
     code: langCode.angelscript,
-    title: "AngelScript",
+    language: "AngelScript",
   },
   {
     code: langCode.antBuildSystem,
-    title: "Ant Build System",
+    language: "Ant Build System",
   },
   {
     code: langCode.antlr,
-    title: "ANTLR",
+    language: "ANTLR",
   },
   {
     code: langCode.apacheconf,
-    title: "ApacheConf",
+    language: "ApacheConf",
   },
   {
     code: langCode.apex,
-    title: "Apex",
+    language: "Apex",
   },
   {
     code: langCode.apiBlueprint,
-    title: "API Blueprint",
+    language: "API Blueprint",
   },
   {
     code: langCode.apl,
-    title: "APL",
+    language: "APL",
   },
   {
     code: langCode.apolloGuidanceComputer,
-    title: "Apollo Guidance Computer",
+    language: "Apollo Guidance Computer",
   },
   {
     code: langCode.applescript,
-    title: "AppleScript",
+    language: "AppleScript",
   },
   {
     code: langCode.arc,
-    title: "Arc",
+    language: "Arc",
   },
   {
     code: langCode.asciidoc,
-    title: "AsciiDoc",
+    language: "AsciiDoc",
   },
   {
     code: langCode.asl,
-    title: "ASL",
+    language: "ASL",
   },
   {
     code: langCode.asn1,
-    title: "ASN.1",
-  },
-  {
-    code: langCode.classicAsp,
-    title: "Classic ASP",
+    language: "ASN.1",
   },
   {
     code: langCode.aspNet,
-    title: "ASP.NET",
+    language: "ASP.NET",
   },
   {
     code: langCode.aspectj,
-    title: "AspectJ",
+    language: "AspectJ",
   },
   {
     code: langCode.assembly,
-    title: "Assembly",
+    language: "Assembly",
   },
   {
     code: langCode.asymptote,
-    title: "Asymptote",
+    language: "Asymptote",
   },
   {
     code: langCode.ats,
-    title: "ATS",
+    language: "ATS",
   },
   {
     code: langCode.augeas,
-    title: "Augeas",
+    language: "Augeas",
   },
   {
     code: langCode.autohotkey,
-    title: "AutoHotkey",
+    language: "AutoHotkey",
   },
   {
     code: langCode.autoit,
-    title: "AutoIt",
+    language: "AutoIt",
   },
   {
     code: langCode.avroIdl,
-    title: "Avro IDL",
+    language: "Avro IDL",
   },
   {
     code: langCode.awk,
-    title: "Awk",
+    language: "Awk",
   },
   {
     code: langCode.ballerina,
-    title: "Ballerina",
+    language: "Ballerina",
   },
   {
     code: langCode.batchfile,
-    title: "Batchfile",
+    language: "Batchfile",
   },
   {
     code: langCode.beef,
-    title: "Beef",
+    language: "Beef",
   },
   {
     code: langCode.befunge,
-    title: "Befunge",
+    language: "Befunge",
   },
   {
     code: langCode.bibtex,
-    title: "BibTeX",
+    language: "BibTeX",
   },
   {
     code: langCode.bison,
-    title: "Bison",
+    language: "Bison",
   },
   {
     code: langCode.bitbake,
-    title: "BitBake",
+    language: "BitBake",
   },
   {
     code: langCode.blade,
-    title: "Blade",
+    language: "Blade",
   },
   {
     code: langCode.blitzbasic,
-    title: "BlitzBasic",
+    language: "BlitzBasic",
   },
   {
     code: langCode.blitzmax,
-    title: "BlitzMax",
+    language: "BlitzMax",
   },
   {
     code: langCode.bluespec,
-    title: "Bluespec",
+    language: "Bluespec",
   },
   {
     code: langCode.boo,
-    title: "Boo",
+    language: "Boo",
   },
   {
     code: langCode.boogie,
-    title: "Boogie",
+    language: "Boogie",
   },
   {
     code: langCode.brightscript,
-    title: "Brightscript",
+    language: "Brightscript",
   },
   {
     code: langCode.zeek,
-    title: "Zeek",
+    language: "Zeek",
   },
   {
     code: langCode.c,
-    title: "C",
+    language: "C",
   },
   {
     code: langCode.cHarp,
-    title: "C#",
+    language: "C#",
   },
   {
     code: langCode.cObjdump,
-    title: "C-ObjDump",
+    language: "C-ObjDump",
   },
   {
     code: langCode.c2hsHaskell,
-    title: "C2hs Haskell",
+    language: "C2hs Haskell",
   },
   {
     code: langCode.cabalConfig,
-    title: "Cabal Config",
+    language: "Cabal Config",
   },
   {
     code: langCode.capnProto,
-    title: "Cap'n Proto",
+    language: "Cap'n Proto",
   },
   {
     code: langCode.cartocss,
-    title: "CartoCSS",
+    language: "CartoCSS",
   },
   {
     code: langCode.ceylon,
-    title: "Ceylon",
+    language: "Ceylon",
   },
   {
     code: langCode.chapel,
-    title: "Chapel",
+    language: "Chapel",
   },
   {
     code: langCode.charity,
-    title: "Charity",
+    language: "Charity",
   },
   {
     code: langCode.chuck,
-    title: "ChucK",
+    language: "ChucK",
   },
   {
     code: langCode.cirru,
-    title: "Cirru",
+    language: "Cirru",
   },
   {
     code: langCode.clarion,
-    title: "Clarion",
+    language: "Clarion",
   },
   {
     code: langCode.classicAsp,
-    title: "Classic ASP",
+    language: "Classic ASP",
   },
   {
     code: langCode.clean,
-    title: "Clean",
+    language: "Clean",
   },
   {
     code: langCode.click,
-    title: "Click",
+    language: "Click",
   },
   {
     code: langCode.clips,
-    title: "CLIPS",
+    language: "CLIPS",
   },
   {
     code: langCode.clojure,
-    title: "Clojure",
+    language: "Clojure",
   },
   {
     code: langCode.closureTemplates,
-    title: "Closure Templates",
+    language: "Closure Templates",
   },
   {
     code: langCode.cloudFirestoreSecurityRules,
-    title: "Cloud Firestore Security Rules",
+    language: "Cloud Firestore Security Rules",
   },
   {
     code: langCode.cmake,
-    title: "CMake",
+    language: "CMake",
   },
   {
     code: langCode.cobol,
-    title: "COBOL",
+    language: "COBOL",
   },
   {
     code: langCode.codeql,
-    title: "CodeQL",
+    language: "CodeQL",
   },
   {
     code: langCode.coffeescript,
-    title: "CoffeeScript",
+    language: "CoffeeScript",
   },
   {
     code: langCode.coldfusion,
-    title: "ColdFusion",
+    language: "ColdFusion",
   },
   {
     code: langCode.coldfusionCfc,
-    title: "ColdFusion CFC",
+    language: "ColdFusion CFC",
   },
   {
     code: langCode.collada,
-    title: "COLLADA",
+    language: "COLLADA",
   },
   {
     code: langCode.commonLisp,
-    title: "Common Lisp",
+    language: "Common Lisp",
   },
   {
     code: langCode.commonWorkflowLanguage,
-    title: "Common Workflow Language",
+    language: "Common Workflow Language",
   },
   {
     code: langCode.componentPascal,
-    title: "Component Pascal",
+    language: "Component Pascal",
   },
   {
     code: langCode.conllU,
-    title: "CoNLL-U",
+    language: "CoNLL-U",
   },
   {
     code: langCode.cool,
-    title: "Cool",
+    language: "Cool",
   },
   {
     code: langCode.coq,
-    title: "Coq",
+    language: "Coq",
   },
   {
     code: langCode.cppObjdump,
-    title: "Cpp-ObjDump",
+    language: "Cpp-ObjDump",
   },
   {
     code: langCode.creole,
-    title: "Creole",
+    language: "Creole",
   },
   {
     code: langCode.crystal,
-    title: "Crystal",
+    language: "Crystal",
   },
   {
     code: langCode.cson,
-    title: "CSON",
+    language: "CSON",
   },
   {
     code: langCode.csoundDocument,
-    title: "Csound Document",
+    language: "Csound Document",
   },
   {
     code: langCode.csoundScore,
-    title: "Csound Score",
+    language: "Csound Score",
   },
   {
     code: langCode.css,
-    title: "CSS",
+    language: "CSS",
   },
   {
     code: langCode.csv,
-    title: "CSV",
+    language: "CSV",
   },
   {
     code: langCode.cuda,
-    title: "Cuda",
+    language: "Cuda",
   },
   {
     code: langCode.curlConfig,
-    title: "cURL Config",
+    language: "cURL Config",
   },
   {
     code: langCode.cweb,
-    title: "CWeb",
+    language: "CWeb",
   },
   {
     code: langCode.cycript,
-    title: "Cycript",
+    language: "Cycript",
   },
   {
     code: langCode.cython,
-    title: "Cython",
+    language: "Cython",
   },
   {
     code: langCode.d,
-    title: "D",
+    language: "D",
   },
   {
     code: langCode.dObjdump,
-    title: "D-ObjDump",
+    language: "D-ObjDump",
   },
   {
     code: langCode.dafny,
-    title: "Dafny",
+    language: "Dafny",
   },
   {
     code: langCode.darcsPatch,
-    title: "Darcs Patch",
+    language: "Darcs Patch",
   },
   {
     code: langCode.dart,
-    title: "Dart",
+    language: "Dart",
   },
   {
     code: langCode.dataweave,
-    title: "DataWeave",
+    language: "DataWeave",
   },
   {
     code: langCode.desktop,
-    title: "desktop",
+    language: "desktop",
   },
   {
     code: langCode.dhall,
-    title: "Dhall",
+    language: "Dhall",
   },
   {
     code: langCode.diff,
-    title: "Diff",
+    language: "Diff",
   },
   {
     code: langCode.digitalCommandLanguage,
-    title: "DIGITAL Command Language",
+    language: "DIGITAL Command Language",
   },
   {
     code: langCode.dircolors,
-    title: "dircolors",
+    language: "dircolors",
   },
   {
     code: langCode.directx3dFile,
-    title: "DirectX 3D File",
+    language: "DirectX 3D File",
   },
   {
     code: langCode.dm,
-    title: "DM",
+    language: "DM",
   },
   {
     code: langCode.dnsZone,
-    title: "DNS Zone",
+    language: "DNS Zone",
   },
   {
     code: langCode.dockerfile,
-    title: "Dockerfile",
+    language: "Dockerfile",
   },
   {
     code: langCode.dogescript,
-    title: "Dogescript",
+    language: "Dogescript",
   },
   {
     code: langCode.dtrace,
-    title: "DTrace",
+    language: "DTrace",
   },
   {
     code: langCode.dylan,
-    title: "Dylan",
+    language: "Dylan",
   },
   {
     code: langCode.e,
-    title: "E",
+    language: "E",
   },
   {
     code: langCode.eagle,
-    title: "Eagle",
+    language: "Eagle",
   },
   {
     code: langCode.easybuild,
-    title: "Easybuild",
+    language: "Easybuild",
   },
   {
     code: langCode.ebnf,
-    title: "EBNF",
+    language: "EBNF",
   },
   {
     code: langCode.ec,
-    title: "eC",
+    language: "eC",
   },
   {
     code: langCode.ecereProjects,
-    title: "Ecere Projects",
+    language: "Ecere Projects",
   },
   {
     code: langCode.ecl,
-    title: "ECL",
+    language: "ECL",
   },
   {
     code: langCode.eclipse,
-    title: "ECLiPSe",
+    language: "ECLiPSe",
   },
   {
     code: langCode.editorconfig,
-    title: "EditorConfig",
+    language: "EditorConfig",
   },
   {
     code: langCode.edjeDataCollection,
-    title: "Edje Data Collection",
+    language: "Edje Data Collection",
   },
   {
     code: langCode.edn,
-    title: "edn",
+    language: "edn",
   },
   {
     code: langCode.eiffel,
-    title: "Eiffel",
+    language: "Eiffel",
   },
   {
     code: langCode.ejs,
-    title: "EJS",
+    language: "EJS",
   },
   {
     code: langCode.elixir,
-    title: "Elixir",
+    language: "Elixir",
   },
   {
     code: langCode.elm,
-    title: "Elm",
+    language: "Elm",
   },
   {
     code: langCode.emacsLisp,
-    title: "Emacs Lisp",
+    language: "Emacs Lisp",
   },
   {
     code: langCode.emberscript,
-    title: "EmberScript",
+    language: "EmberScript",
   },
   {
     code: langCode.eq,
-    title: "EQ",
+    language: "EQ",
   },
   {
     code: langCode.erlang,
-    title: "Erlang",
+    language: "Erlang",
   },
   {
     code: langCode.fSharp,
-    title: "F#",
+    language: "F#",
   },
   {
     code: langCode.fStar,
-    title: "F*",
+    language: "F*",
   },
   {
     code: langCode.factor,
-    title: "Factor",
+    language: "Factor",
   },
   {
     code: langCode.fancy,
-    title: "Fancy",
+    language: "Fancy",
   },
   {
     code: langCode.fantom,
-    title: "Fantom",
+    language: "Fantom",
   },
   {
     code: langCode.faust,
-    title: "Faust",
+    language: "Faust",
   },
   {
     code: langCode.figletFont,
-    title: "FIGlet Font",
+    language: "FIGlet Font",
   },
   {
     code: langCode.filebenchWml,
-    title: "Filebench WML",
+    language: "Filebench WML",
   },
   {
     code: langCode.filterscript,
-    title: "Filterscript",
+    language: "Filterscript",
   },
   {
     code: langCode.fish,
-    title: "fish",
+    language: "fish",
   },
   {
     code: langCode.flux,
-    title: "FLUX",
+    language: "FLUX",
   },
   {
     code: langCode.formatted,
-    title: "Formatted",
+    language: "Formatted",
   },
   {
     code: langCode.forth,
-    title: "Forth",
+    language: "Forth",
   },
   {
     code: langCode.fortran,
-    title: "Fortran",
+    language: "Fortran",
   },
   {
     code: langCode.fortranFreeForm,
-    title: "Fortran Free Form",
+    language: "Fortran Free Form",
   },
   {
     code: langCode.freemarker,
-    title: "FreeMarker",
+    language: "FreeMarker",
   },
   {
     code: langCode.frege,
-    title: "Frege",
+    language: "Frege",
   },
   {
     code: langCode.futhark,
-    title: "Futhark",
+    language: "Futhark",
   },
   {
     code: langCode.gCode,
-    title: "G-code",
+    language: "G-code",
   },
   {
     code: langCode.gameMakerLanguage,
-    title: "Game Maker Language",
+    language: "Game Maker Language",
   },
   {
     code: langCode.gaml,
-    title: "GAML",
+    language: "GAML",
   },
   {
     code: langCode.gams,
-    title: "GAMS",
+    language: "GAMS",
   },
   {
     code: langCode.gap,
-    title: "GAP",
+    language: "GAP",
   },
   {
     code: langCode.gccMachineDescription,
-    title: "GCC Machine Description",
+    language: "GCC Machine Description",
   },
   {
     code: langCode.gdb,
-    title: "GDB",
+    language: "GDB",
   },
   {
     code: langCode.gdscript,
-    title: "GDScript",
+    language: "GDScript",
   },
   {
     code: langCode.gedcom,
-    title: "GEDCOM",
+    language: "GEDCOM",
   },
   {
     code: langCode.genie,
-    title: "Genie",
+    language: "Genie",
   },
   {
     code: langCode.genshi,
-    title: "Genshi",
+    language: "Genshi",
   },
   {
     code: langCode.gentooEbuild,
-    title: "Gentoo Ebuild",
+    language: "Gentoo Ebuild",
   },
   {
     code: langCode.gentooEclass,
-    title: "Gentoo Eclass",
+    language: "Gentoo Eclass",
   },
   {
     code: langCode.gerberImage,
-    title: "Gerber Image",
+    language: "Gerber Image",
   },
   {
     code: langCode.gettextCatalog,
-    title: "Gettext Catalog",
+    language: "Gettext Catalog",
   },
   {
     code: langCode.gherkin,
-    title: "Gherkin",
+    language: "Gherkin",
   },
   {
     code: langCode.gitAttributes,
-    title: "Git Attributes",
+    language: "Git Attributes",
   },
   {
     code: langCode.gitConfig,
-    title: "Git Config",
+    language: "Git Config",
   },
   {
     code: langCode.glsl,
-    title: "GLSL",
+    language: "GLSL",
   },
   {
     code: langCode.glyph,
-    title: "Glyph",
+    language: "Glyph",
   },
   {
     code: langCode.glyphBitmapDistributionFormat,
-    title: "Glyph Bitmap Distribution Format",
+    language: "Glyph Bitmap Distribution Format",
   },
   {
     code: langCode.gn,
-    title: "GN",
+    language: "GN",
   },
   {
     code: langCode.gnuplot,
-    title: "Gnuplot",
+    language: "Gnuplot",
   },
   {
     code: langCode.go,
-    title: "Go",
+    language: "Go",
   },
   {
     code: langCode.golo,
-    title: "Golo",
+    language: "Golo",
   },
   {
     code: langCode.gosu,
-    title: "Gosu",
+    language: "Gosu",
   },
   {
     code: langCode.grace,
-    title: "Grace",
+    language: "Grace",
   },
   {
     code: langCode.gradle,
-    title: "Gradle",
+    language: "Gradle",
   },
   {
     code: langCode.grammaticalFramework,
-    title: "Grammatical Framework",
+    language: "Grammatical Framework",
   },
   {
     code: langCode.graphModelingLanguage,
-    title: "Graph Modeling Language",
+    language: "Graph Modeling Language",
   },
   {
     code: langCode.graphql,
-    title: "GraphQL",
+    language: "GraphQL",
   },
   {
     code: langCode.graphvizDot,
-    title: "Graphviz (DOT)",
+    language: "Graphviz (DOT)",
   },
   {
     code: langCode.groovy,
-    title: "Groovy",
+    language: "Groovy",
   },
   {
     code: langCode.groovyServerPages,
-    title: "Groovy Server Pages",
+    language: "Groovy Server Pages",
   },
   {
     code: langCode.hack,
-    title: "Hack",
+    language: "Hack",
   },
   {
     code: langCode.haml,
-    title: "Haml",
+    language: "Haml",
   },
   {
     code: langCode.handlebars,
-    title: "Handlebars",
+    language: "Handlebars",
   },
   {
     code: langCode.haproxy,
-    title: "HAProxy",
+    language: "HAProxy",
   },
   {
     code: langCode.harbour,
-    title: "Harbour",
+    language: "Harbour",
   },
   {
     code: langCode.haskell,
-    title: "Haskell",
+    language: "Haskell",
   },
   {
     code: langCode.haxe,
-    title: "Haxe",
+    language: "Haxe",
   },
   {
     code: langCode.hcl,
-    title: "HCL",
+    language: "HCL",
   },
   {
     code: langCode.hiveql,
-    title: "HiveQL",
+    language: "HiveQL",
   },
   {
     code: langCode.hlsl,
-    title: "HLSL",
+    language: "HLSL",
   },
   {
     code: langCode.holyc,
-    title: "HolyC",
+    language: "HolyC",
   },
   {
     code: langCode.htmlPlusEcr,
-    title: "HTML+ECR",
+    language: "HTML+ECR",
   },
   {
     code: langCode.htmlPlusEex,
-    title: "HTML+EEX",
+    language: "HTML+EEX",
   },
   {
     code: langCode.htmlPlusErb,
-    title: "HTML+ERB",
+    language: "HTML+ERB",
   },
   {
     code: langCode.htmlPlusPhp,
-    title: "HTML+PHP",
+    language: "HTML+PHP",
   },
   {
     code: langCode.htmlPlusRazor,
-    title: "HTML+Razor",
+    language: "HTML+Razor",
   },
   {
     code: langCode.http,
-    title: "HTTP",
+    language: "HTTP",
   },
   {
     code: langCode.hxml,
-    title: "HXML",
+    language: "HXML",
   },
   {
     code: langCode.hy,
-    title: "Hy",
+    language: "Hy",
   },
   {
     code: langCode.hyphy,
-    title: "HyPhy",
+    language: "HyPhy",
   },
   {
     code: langCode.idl,
-    title: "IDL",
+    language: "IDL",
   },
   {
     code: langCode.idris,
-    title: "Idris",
+    language: "Idris",
   },
   {
     code: langCode.ignoreList,
-    title: "Ignore List",
+    language: "Ignore List",
   },
   {
     code: langCode.igorPro,
-    title: "IGOR Pro",
+    language: "IGOR Pro",
   },
   {
     code: langCode.imagejMacro,
-    title: "ImageJ Macro",
+    language: "ImageJ Macro",
   },
   {
     code: langCode.inform7,
-    title: "Inform 7",
+    language: "Inform 7",
   },
   {
     code: langCode.ini,
-    title: "INI",
+    language: "INI",
   },
   {
     code: langCode.innoSetup,
-    title: "Inno Setup",
+    language: "Inno Setup",
   },
   {
     code: langCode.io,
-    title: "Io",
+    language: "Io",
   },
   {
     code: langCode.ioke,
-    title: "Ioke",
+    language: "Ioke",
   },
   {
     code: langCode.ircLog,
-    title: "IRC log",
+    language: "IRC log",
   },
   {
     code: langCode.isabelle,
-    title: "Isabelle",
+    language: "Isabelle",
   },
   {
     code: langCode.isabelleRoot,
-    title: "Isabelle ROOT",
+    language: "Isabelle ROOT",
   },
   {
     code: langCode.j,
-    title: "J",
+    language: "J",
   },
   {
     code: langCode.jasmin,
-    title: "Jasmin",
+    language: "Jasmin",
   },
   {
     code: langCode.javaProperties,
-    title: "Java Properties",
+    language: "Java Properties",
   },
   {
     code: langCode.javaServerPages,
-    title: "Java Server Pages",
+    language: "Java Server Pages",
   },
   {
     code: langCode.javascriptPlusErb,
-    title: "JavaScript+ERB",
+    language: "JavaScript+ERB",
   },
   {
     code: langCode.jflex,
-    title: "JFlex",
+    language: "JFlex",
   },
   {
     code: langCode.jison,
-    title: "Jison",
+    language: "Jison",
   },
   {
     code: langCode.jisonLex,
-    title: "Jison Lex",
+    language: "Jison Lex",
   },
   {
     code: langCode.jolie,
-    title: "Jolie",
+    language: "Jolie",
   },
   {
     code: langCode.json,
-    title: "JSON",
+    language: "JSON",
   },
   {
     code: langCode.jsonWithComments,
-    title: "JSON with Comments",
+    language: "JSON with Comments",
   },
   {
     code: langCode.json5,
-    title: "JSON5",
+    language: "JSON5",
   },
   {
     code: langCode.jsoniq,
-    title: "JSONiq",
+    language: "JSONiq",
   },
   {
     code: langCode.jsonld,
-    title: "JSONLD",
+    language: "JSONLD",
   },
   {
     code: langCode.jsonnet,
-    title: "Jsonnet",
+    language: "Jsonnet",
   },
   {
     code: langCode.julia,
-    title: "Julia",
+    language: "Julia",
   },
   {
     code: langCode.jupyterNotebook,
-    title: "Jupyter Notebook",
+    language: "Jupyter Notebook",
   },
   {
     code: langCode.kaitaiStruct,
-    title: "Kaitai Struct",
+    language: "Kaitai Struct",
   },
   {
     code: langCode.kicadLayout,
-    title: "KiCad Layout",
+    language: "KiCad Layout",
   },
   {
     code: langCode.kicadLegacyLayout,
-    title: "KiCad Legacy Layout",
+    language: "KiCad Legacy Layout",
   },
   {
     code: langCode.kicadSchematic,
-    title: "KiCad Schematic",
+    language: "KiCad Schematic",
   },
   {
     code: langCode.kit,
-    title: "Kit",
+    language: "Kit",
   },
   {
     code: langCode.kotlin,
-    title: "Kotlin",
+    language: "Kotlin",
   },
   {
     code: langCode.krl,
-    title: "KRL",
+    language: "KRL",
   },
   {
     code: langCode.labview,
-    title: "LabVIEW",
+    language: "LabVIEW",
   },
   {
     code: langCode.lasso,
-    title: "Lasso",
+    language: "Lasso",
   },
   {
     code: langCode.latte,
-    title: "Latte",
+    language: "Latte",
   },
   {
     code: langCode.lean,
-    title: "Lean",
+    language: "Lean",
   },
   {
     code: langCode.less,
-    title: "Less",
+    language: "Less",
   },
   {
     code: langCode.lex,
-    title: "Lex",
+    language: "Lex",
   },
   {
     code: langCode.lfe,
-    title: "LFE",
+    language: "LFE",
   },
   {
     code: langCode.lilypond,
-    title: "LilyPond",
+    language: "LilyPond",
   },
   {
     code: langCode.limbo,
-    title: "Limbo",
+    language: "Limbo",
   },
   {
     code: langCode.linkerScript,
-    title: "Linker Script",
+    language: "Linker Script",
   },
   {
     code: langCode.linuxKernelModule,
-    title: "Linux Kernel Module",
+    language: "Linux Kernel Module",
   },
   {
     code: langCode.liquid,
-    title: "Liquid",
+    language: "Liquid",
   },
   {
     code: langCode.literateAgda,
-    title: "Literate Agda",
+    language: "Literate Agda",
   },
   {
     code: langCode.literateCoffeescript,
-    title: "Literate CoffeeScript",
+    language: "Literate CoffeeScript",
   },
   {
     code: langCode.literateHaskell,
-    title: "Literate Haskell",
+    language: "Literate Haskell",
   },
   {
     code: langCode.livescript,
-    title: "LiveScript",
+    language: "LiveScript",
   },
   {
     code: langCode.llvm,
-    title: "LLVM",
+    language: "LLVM",
   },
   {
     code: langCode.logos,
-    title: "Logos",
+    language: "Logos",
   },
   {
     code: langCode.logtalk,
-    title: "Logtalk",
+    language: "Logtalk",
   },
   {
     code: langCode.lolcode,
-    title: "LOLCODE",
+    language: "LOLCODE",
   },
   {
     code: langCode.lookml,
-    title: "LookML",
+    language: "LookML",
   },
   {
     code: langCode.loomscript,
-    title: "LoomScript",
+    language: "LoomScript",
   },
   {
     code: langCode.lsl,
-    title: "LSL",
+    language: "LSL",
   },
   {
     code: langCode.ltspiceSymbol,
-    title: "LTspice Symbol",
+    language: "LTspice Symbol",
   },
   {
     code: langCode.lua,
-    title: "Lua",
+    language: "Lua",
   },
   {
     code: langCode.m,
-    title: "M",
+    language: "M",
   },
   {
     code: langCode.m4,
-    title: "M4",
+    language: "M4",
   },
   {
     code: langCode.m4sugar,
-    title: "M4Sugar",
+    language: "M4Sugar",
   },
   {
     code: langCode.macaulay2,
-    title: "Macaulay2",
+    language: "Macaulay2",
   },
   {
     code: langCode.makefile,
-    title: "Makefile",
+    language: "Makefile",
   },
 ];

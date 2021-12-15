@@ -1,9 +1,14 @@
-import { SponenLanguagesCodes as Codes } from "../api/interfaces";
+import { SpokenLanguagesCodes as Codes } from "../api/interfaces.d";
 
-interface ISpokenLanguage {
-  code: Codes;
+export interface ISpokenLanguage {
+  code?: Codes;
   language: string;
 }
+
+export const defaultSpokenLanguage: ISpokenLanguage = {
+  code: undefined,
+  language: "Any",
+};
 
 export const spokenLanguages: ISpokenLanguage[] = [
   {

@@ -1,9 +1,14 @@
 import { DateTypes } from "../api/interfaces.d";
 
-interface IDateRage {
+export interface IDateRage {
   dateType: DateTypes;
   title: string;
 }
+
+export const defaultDateRange: IDateRage = {
+  dateType: DateTypes.Daily,
+  title: "Today",
+};
 
 export const dateRanges: IDateRage[] = [
   {

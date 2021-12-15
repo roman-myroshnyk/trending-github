@@ -15,13 +15,17 @@ import styles from "./PullDownWithSearchBar.module.css";
 interface IPullDownWithSearchBar {
   title: string;
   modalTilte: string;
-  selectedValue: string;
+  selectedValue?: string;
+  selectedTitle: string;
+  handleSelect: (value?: string) => void;
   items: ILanguage[] | ISpokenLanguage[];
 }
 const PullDownWithSearchBar: React.FC<IPullDownWithSearchBar> = ({
   title,
   modalTilte,
   selectedValue,
+  selectedTitle,
+  handleSelect,
   items,
 }) => {
   const [isOpen, setOpen] = useState(false);
@@ -39,7 +43,7 @@ const PullDownWithSearchBar: React.FC<IPullDownWithSearchBar> = ({
         onClick={toggleModal}
       >
         {`${title}: `}
-        <span className={styles.pullDownSpan}> {selectedValue} </span>
+        <span className={styles.pullDownSpan}> {selectedTitle} </span>
       </div>
       {isOpen && (
         <div className={styles.modal}>
@@ -51,11 +55,25 @@ const PullDownWithSearchBar: React.FC<IPullDownWithSearchBar> = ({
             />
           </div>
           <PullDownMenuList>
-            <PullDownClearItem text="Clear language" />
+            <PullDownClearItem
+              text="Clear language"
+              clickHandler={() => {
+                handleSelect();
+                toggleModal();
+              }}
+            />
             {items.map((item) => {
               if (searchString === "") {
                 return (
-                  <PullDownMenuItem key={item.code} text={item.language} />
+                  <PullDownMenuItem
+                    key={item.code}
+                    text={item.language}
+                    clickHandler={() => {
+                      handleSelect(item.code);
+                      toggleModal();
+                    }}
+                    checked={item.code == selectedValue}
+                  />
                 );
               }
               if (
@@ -63,7 +81,15 @@ const PullDownWithSearchBar: React.FC<IPullDownWithSearchBar> = ({
                 item.language.toLowerCase().includes(searchString)
               ) {
                 return (
-                  <PullDownMenuItem key={item.code} text={item.language} />
+                  <PullDownMenuItem
+                    key={item.code}
+                    text={item.language}
+                    clickHandler={() => {
+                      handleSelect(item.code);
+                      toggleModal();
+                    }}
+                    checked={item.code == selectedValue}
+                  />
                 );
               } else {
                 return null;
