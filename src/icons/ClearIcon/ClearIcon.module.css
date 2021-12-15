@@ -1,0 +1,11 @@
+.clearIcon {
+    color: inherit;
+    visibility: visible;
+    vertical-align: middle;
+    float: left;
+    margin-left: -20px;
+    display: inline-block;
+    overflow: visible !important;
+    fill: currentColor;
+}
+

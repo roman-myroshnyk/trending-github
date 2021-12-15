@@ -1,16 +1,21 @@
 import React from "react";
 import Controls from "../../components/Trending/Controls/Controls";
-
+import Header from "../../components/Header/Header";
+import MainContentsWrapper from "../../components/MainContentsWrapper/MainContentsWrapper";
+import DeveloperBage from "../../components/Developer/DeveloperBage";
+import { developersResponse } from "../../const/developersMockData";
 const DevelopersPage: React.FC = () => (
   <div>
-    <header>
-      <h1>Trending</h1>
-      <p>These are the developers building the hot tools today.</p>
-    </header>
-    <div>
-      <Controls />
-      <div>DevelopersPage</div>
-    </div>
+    <Header
+      title="Trending"
+      subTitle="These are the developers building the hot tools today."
+    />
+    <MainContentsWrapper>
+      <Controls hideSpokenLanguages={true} />
+      {developersResponse.map((developer) => {
+        return <DeveloperBage key={developer.rank} developer={developer} />;
+      })}
+    </MainContentsWrapper>
   </div>
 );
 

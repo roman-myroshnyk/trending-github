@@ -1,0 +1,28 @@
+.title {
+    line-height: 1.25;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top:0;
+    margin-bottom:0;
+    margin: 0.67em 0;
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size:20px;
+    }
+}
+
+.link {
+    color: #58a6ff !important;
+    text-decoration: none;
+    background-color: transparent;
+ }
+ .link:hover {
+     text-decoration: underline;
+     outline-width: 0;
+ }
+
+ .span {
+    font-weight: 400 !important;
+}

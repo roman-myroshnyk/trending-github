@@ -1,0 +1,20 @@
+.title {
+    line-height: 1.25 !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin: 0.67em 0;
+}
+
+.link {
+    max-width: 175px;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #58a6ff;
+    text-decoration: none;
+    background-color: transparent;
+}

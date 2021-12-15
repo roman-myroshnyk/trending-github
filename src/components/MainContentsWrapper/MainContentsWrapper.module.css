@@ -1,0 +1,17 @@
+.wrapper {
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-top: 40px;
+    position:relative;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1012px;
+}
+
+.innerWrapper{
+    background-color: #161b22;
+    border-color: #30363d;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 6px;
+}

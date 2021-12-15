@@ -1,0 +1,19 @@
+.avatar {
+    margin-right: 16px !important;
+    margin-left: 16px !important;
+}
+
+
+.link {
+    color: #58a6ff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.img {
+    width: 48px;
+    height: 48px;
+    aspect-ratio: auto 48 / 48;
+    border-radius: 50% !important;
+    border-style: none;
+}

@@ -1,0 +1,24 @@
+.wrapper {
+    padding: 16px;
+    margin-top: -1px;
+    list-style-type: none;
+    border-top-style: solid;
+    border-top-width: 1px;
+    display: block;
+    border-top-color: #21262d;
+    background-color: #0d1117;
+    word-wrap: break-word;
+    text-align: unset;
+}
+
+.wrapper:first-of-type {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-top-color:transparent;
+    
+}
+
+.wrapper:last-of-type {
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}

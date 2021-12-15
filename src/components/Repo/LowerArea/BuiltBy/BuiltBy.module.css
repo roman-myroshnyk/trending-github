@@ -1,0 +1,21 @@
+.authorLink {
+    display: inline-block;
+    color:#58a6ff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.authorAvatar {
+    border-radius: 50% !important;
+    display: inline-block;
+    overflow: hidden;
+    line-height: 1;
+    vertical-align: middle;
+    background-color: rgba(240, 246,252,0.1);
+    flex-shrink: 0;
+    box-shadow: 0 0 0 1px rgba(240, 246, 252, 0.1);
+    margin-bottom: 4px;
+    border-style: none;
+    width:20px;
+    height: 20px;
+}

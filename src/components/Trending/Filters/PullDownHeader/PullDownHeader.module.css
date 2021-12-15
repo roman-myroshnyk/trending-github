@@ -1,0 +1,49 @@
+.modalHeader {
+    background-color: #161b22;
+    padding: 8px 10px;
+    line-height: 16px;
+    border-bottom: 1px solid #21262d;
+}
+
+@media (max-width: 767px) {
+    .modalHeader {
+        padding: 16px;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+    }
+}
+
+.modaleHeaderTitle {
+    font-weight: 600;
+    color: #c9d1d9;
+}
+
+.closeButton {
+    color: #8b949e;
+    float:right;
+    cursor: pointer;
+    display: none !important;
+    margin-left: 8px !important;
+    padding: 0;
+    background: transparent;
+    border:0;
+    outline: none;
+    font-size: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    user-select: none;
+    border-radius: 0;
+    font-family: inherit;
+    line-height: inherit;
+    text-transform: none;
+    overflow: visible;
+    font: inherit;
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    .closeButton {
+        display: block !important;
+        position: relative;
+    }
+}

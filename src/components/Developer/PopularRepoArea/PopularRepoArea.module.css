@@ -1,0 +1,21 @@
+@media (min-width: 768px) {
+    .wrapper {
+        width: 49.99%;
+    }    
+}
+
+.innerWrapper {
+    margin-bottom: 16px !important;
+    margin-top: 8px !important;
+}
+
+@media (min-width: 768px) {
+    .innerWrapper {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+.article {
+    display: block;
+}

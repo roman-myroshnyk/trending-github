@@ -1,0 +1,18 @@
+.wrapper {
+    align-items: center;
+    justify-content: space-between;
+    padding:16px;
+    margin:-1px -1px 0;
+    background-color: #161b22;
+    border-color: #30363d;
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+@media (min-width: 768px) {
+    .wrapper{
+        display: flex;
+    }
+}
