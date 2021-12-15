@@ -19,7 +19,7 @@ export interface IAuthor {
   avatar: string;
 }
 
-interface IDeveloper {
+export interface IDeveloper {
   rank: number;
   username: string;
   name: string;
