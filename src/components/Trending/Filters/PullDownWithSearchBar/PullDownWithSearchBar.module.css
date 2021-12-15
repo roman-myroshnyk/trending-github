@@ -53,7 +53,7 @@
     border-color: #30363d;
     position: absolute;
     width: 300px;
-    margin-top: 4px;
+    margin-top: 30px;
     margin-bottom: 20px;
     overflow: hidden;
     font-size: 12px;
@@ -101,6 +101,13 @@
 @media (max-width: 767px) {
     .pullDownIsOpen::before {
         background-color: rgba(1,4,9, 0.8);
-        animation: hx_rms-trigger-aniation .24s cubic-bezier(0,0,0.2,1) backwards;
+        animation: hx_rsm-trigger-aniation .24s cubic-bezier(0,0,0.2,1) backwards;
+    }
+}
+
+@keyframes hx_rsm-modal-animation{
+    0%{
+        opacity:0;
+        transform:scale(0.9)
     }
 }
