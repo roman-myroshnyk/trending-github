@@ -13,6 +13,8 @@ interface IPullDown {
   title: string;
   modalTitle: string;
   selectedValue: string;
+  selectedTitle: string;
+  handleSelect: (value: string) => void;
   items: IDateRage[];
 }
 
@@ -20,6 +22,8 @@ const PullDown: React.FC<IPullDown> = ({
   title,
   modalTitle,
   selectedValue,
+  selectedTitle,
+  handleSelect,
   items,
 }) => {
   // modal open flag
@@ -39,14 +43,22 @@ const PullDown: React.FC<IPullDown> = ({
         onClick={toggleModal}
       >
         {` ${title}: `}
-        <span className={styles.pullDownSpan}> {selectedValue} </span>
+        <span className={styles.pullDownSpan}> {selectedTitle} </span>
       </div>
       {isOpen && (
         <div className={styles.modal}>
           <PullDownHeader title={modalTitle} closeModal={toggleModal} />
           <PullDownMenuList>
             {items.map((item) => (
-              <PullDownMenuItem key={item.dateType} text={item.title} />
+              <PullDownMenuItem
+                key={item.dateType}
+                text={item.title}
+                clickHandler={() => {
+                  handleSelect(item.dateType);
+                  toggleModal();
+                }}
+                checked={item.dateType === selectedValue}
+              />
             ))}
           </PullDownMenuList>
         </div>

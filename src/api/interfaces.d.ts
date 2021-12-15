@@ -4,16 +4,16 @@ interface IRepository {
   repositoryName: string;
   url: string;
   description: string;
-  language: ProgrammingLanguages;
+  language: string;
   languageColor: string;
   totalStars: number;
   forks: number;
   starsSince: number;
-  since: DateTypes;
-  builtBy: IBuiltBy[];
+  since: string;
+  builtBy: IAuthor[];
 }
 
-interface IBuiltBy {
+export interface IAuthor {
   username: string;
   url: string;
   avatar: string;
@@ -25,7 +25,7 @@ interface IDeveloper {
   name: string;
   url: string;
   avatar: string;
-  since: DateTypes;
+  since: string;
   popularRepository: IPopularRepository;
 }
 
@@ -619,7 +619,7 @@ export enum ProgrammingLanguages {
   zimpl = "zimpl",
 }
 
-export enum SponenLanguagesCodes {
+export enum SpokenLanguagesCodes {
   ab = "ab",
   aa = "aa",
   af = "af",

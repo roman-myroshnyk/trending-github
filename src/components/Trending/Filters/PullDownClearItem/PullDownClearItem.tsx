@@ -7,11 +7,15 @@ import styles from "./PullDownClearItem.module.css";
 
 interface IPullDownClearItem {
   text: string;
+  clickHandler: () => void;
 }
 
-const PullDownClearItem: React.FC<IPullDownClearItem> = ({ text }) => {
+const PullDownClearItem: React.FC<IPullDownClearItem> = ({
+  text,
+  clickHandler,
+}) => {
   return (
-    <a className={styles.modalMenuItem}>
+    <a onClick={clickHandler} className={styles.modalMenuItem}>
       <ClearIcon />
       <span className={styles.modalMenuItemText}> {text}</span>
     </a>
