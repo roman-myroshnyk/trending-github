@@ -4,8 +4,8 @@
 
 @media (min-width: 544px) {
     .floatingButtons {
-        margin-left: 16px !important;
+        margin-left: 0;
         justify-content: flex-end !important;
-        width: 33.33%;
+        width: 30.33%;
     }
 }

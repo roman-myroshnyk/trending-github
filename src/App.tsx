@@ -1,6 +1,6 @@
 // react
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 // context
 import TrendingContextProvider from "./context/TrendingContext";
@@ -25,6 +25,9 @@ const App: React.FC = () => {
               </Route>
               <Route path="/developers/:language?">
                 <DevelopersPage />
+              </Route>
+              <Route path="*">
+                <Redirect to="/repositories" />
               </Route>
             </Switch>
           </main>
